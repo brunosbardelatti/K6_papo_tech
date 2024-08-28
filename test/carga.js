@@ -7,9 +7,9 @@ export let options = {
             executor: 'constant-arrival-rate',
             // 'rate' define o número de requisições por segundo (RPS)
             // Aqui, é calculado para gerar 50 requisições por segundo (3000 requisições divididas por 60 segundos)
-            rate: Math.floor(60/ 60), 
+            rate: Math.floor(3000/ 60), 
             timeUnit: '1s', 
-            duration: '1m', 
+            duration: '10m', 
             preAllocatedVUs: 50, 
             maxVUs: 100, 
         },

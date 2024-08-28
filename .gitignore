@@ -1,0 +1,29 @@
+# Ignorar a pasta de relatórios
+/reports/
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar pastas de cache do editor (Exemplo para VSCode)
+.vscode/
+.idea/
+
+# Ignorar arquivos de configuração locais
+.env
+*.local
+
+# Ignorar pastas de dependências (caso existam no projeto)
+node_modules/
+vendor/
+
+# Ignorar arquivos binários
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.swp

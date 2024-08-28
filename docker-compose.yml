@@ -5,7 +5,8 @@ services:
     image: grafana/k6
     volumes:
       - ./test:/test
-    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+      - ./reports:/reports
+    entrypoint: ["k6", "run", "--out", "json=/reports/report-node-1.json", "/test/${SCRIPT}"]
     environment:
       - SCRIPT=${SCRIPT}
 
@@ -13,7 +14,8 @@ services:
     image: grafana/k6
     volumes:
       - ./test:/test
-    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+      - ./reports:/reports
+    entrypoint: ["k6", "run", "--out", "json=/reports/report-node-2.json", "/test/${SCRIPT}"]
     environment:
       - SCRIPT=${SCRIPT}
 
@@ -21,7 +23,8 @@ services:
     image: grafana/k6
     volumes:
       - ./test:/test
-    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+      - ./reports:/reports
+    entrypoint: ["k6", "run", "--out", "json=/reports/report-node-3.json", "/test/${SCRIPT}"]
     environment:
       - SCRIPT=${SCRIPT}
 
@@ -29,7 +32,8 @@ services:
     image: grafana/k6
     volumes:
       - ./test:/test
-    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+      - ./reports:/reports
+    entrypoint: ["k6", "run", "--out", "json=/reports/report-node-4.json", "/test/${SCRIPT}"]
     environment:
       - SCRIPT=${SCRIPT}
 
@@ -37,6 +41,7 @@ services:
     image: grafana/k6
     volumes:
       - ./test:/test
-    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+      - ./reports:/reports
+    entrypoint: ["k6", "run", "--out", "json=/reports/report-node-5.json", "/test/${SCRIPT}"]
     environment:
       - SCRIPT=${SCRIPT}
