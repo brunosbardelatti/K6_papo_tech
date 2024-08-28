@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  k6-node-1:
+    image: grafana/k6
+    volumes:
+      - ./test:/test
+    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+    environment:
+      - SCRIPT=${SCRIPT}
+
+  k6-node-2:
+    image: grafana/k6
+    volumes:
+      - ./test:/test
+    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+    environment:
+      - SCRIPT=${SCRIPT}
+
+  k6-node-3:
+    image: grafana/k6
+    volumes:
+      - ./test:/test
+    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+    environment:
+      - SCRIPT=${SCRIPT}
+
+  k6-node-4:
+    image: grafana/k6
+    volumes:
+      - ./test:/test
+    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+    environment:
+      - SCRIPT=${SCRIPT}
+
+  k6-node-5:
+    image: grafana/k6
+    volumes:
+      - ./test:/test
+    entrypoint: ["k6", "run", "/test/${SCRIPT}"]
+    environment:
+      - SCRIPT=${SCRIPT}
